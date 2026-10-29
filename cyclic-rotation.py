@@ -10,9 +10,9 @@ def solution(A, K):
     # Rotating n times returns the array to its original order, so k rotations are equivalent to (K mod n) rotations
     k = K % n
 
-    # No rotation needed, so return a copy of the array
+    # No rotation needed, so return A
     if k == 0:
-        return A[:]
+        return A
 
     # Rotating right k times moves the last k elements to the front
     # A[-k:] = last k elements, A[:-k] = everything before them
